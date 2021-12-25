@@ -1,0 +1,12 @@
+plugins {
+	id 'java-library'
+}
+
+dependencies {
+	api(project(":jadx-plugins:jadx-plugins-api"))
+
+	implementation(project(":jadx-plugins:jadx-dex-input"))
+	implementation(files('lib/dx-1.16.jar'))
+
+	implementation 'org.ow2.asm:asm:9.2'
+}
